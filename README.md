@@ -2,4 +2,15 @@
 
 Generates random dummy JSON data atom package.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![overview](https://raw.githubusercontent.com/KunihikoKido/atom-json-generator/master/screenshots/overview.gif)
+
+## Commands
+* Json Generator: New Template
+* Json Generator: Generate (ctrl-alt-g)
+
+## Available helpers
+This package is used based on the [dummy-json](https://github.com/webroo/dummy-json).
+
+You can see the  details of available helpers on the dummy-json.
+
+I am grateful to the dummy-json.
