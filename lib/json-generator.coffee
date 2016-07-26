@@ -87,6 +87,8 @@ module.exports = JsonGenerator =
       languageCode: customHelpers.languageCode
       currencyCode: customHelpers.currencyCode
       jaLorem: customHelpers.jaLorem
+      random: customHelpers.random
+      
     try
       result = allowUnsafeNewFunction -> dummyjson.parse(editor.getText(), {mockdata: mockdata})
       json = JSON.parse(result)

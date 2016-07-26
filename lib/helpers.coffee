@@ -67,3 +67,9 @@ module.exports =
 
     ret = ret.trimRight()
     return ret
+
+  random: (text, separator) ->
+    console.log text, separator
+    if !separator
+      separator = ','
+    return dummyjson.utils.randomArrayItem(text.split(separator))

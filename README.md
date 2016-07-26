@@ -39,3 +39,11 @@ Generates a random currency code.
 * `sentenceCount` Number of sentences to generate (optional, default is 1)
 
 Generates random sentences of japanese lorem ipsum text.
+
+### Random Keyword
+`{{random [text] [separator]}}`
+
+* `text` keywords string
+* `separator` separator (default is ',')
+
+`{{random 'apple,orange,banana', ','}}`
