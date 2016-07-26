@@ -89,9 +89,10 @@ module.exports = JsonGenerator =
       jaLorem: customHelpers.jaLorem
     try
       result = allowUnsafeNewFunction -> dummyjson.parse(editor.getText(), {mockdata: mockdata})
+      json = JSON.parse(result)
       atom.workspace.open('').then((newEditor) ->
         newEditor.setGrammar(atom.grammars.selectGrammar('JSON'))
-        newEditor.setText(result)
+        newEditor.setText(JSON.stringify(json, null, '  '))
       )
       atom.notifications.addSuccess('json-generator', {
           detail: "Success! Generated dummy JSON."
