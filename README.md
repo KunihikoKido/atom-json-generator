@@ -17,3 +17,25 @@ I am grateful to the dummy-json.
 
 ## Overriding built-in mock data.
 You can override the built-in data using the package settings.
+
+## My Own Available helpers
+
+### Language Code
+
+`{{languageCode}}`
+
+Generates a random language code.
+
+### Currency Code
+
+`{{currencyCode}}`
+
+Generates a random currency code.
+
+### Japanese Lorem ipsum
+
+`{{jaLorem [sentenceCount]}}`
+
+* `sentenceCount` Number of sentences to generate (optional, default is 1)
+
+Generates random sentences of japanese lorem ipsum text.
