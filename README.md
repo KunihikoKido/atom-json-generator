@@ -14,3 +14,6 @@ This package is used based on the [dummy-json](https://github.com/webroo/dummy-j
 You can see the  details of available helpers on the dummy-json.
 
 I am grateful to the dummy-json.
+
+## Overriding built-in mock data.
+You can override the built-in data using the package settings.
