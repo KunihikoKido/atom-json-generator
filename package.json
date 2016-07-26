@@ -1,7 +1,7 @@
 {
   "name": "json-generator",
   "main": "./lib/json-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate the json dummy data package",
   "keywords": [
     "json",
