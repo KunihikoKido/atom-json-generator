@@ -4,6 +4,7 @@ dummyjson = require 'dummy-json'
 fs = require 'fs'
 path = require 'path'
 
+customHelpers = require './helpers'
 
 module.exports = JsonGenerator =
   config:
@@ -83,7 +84,9 @@ module.exports = JsonGenerator =
       countries: atom.config.get('json-generator.mockdataCountries')
       countryCodes: atom.config.get('json-generator.mockdataCountryCodes')
       colors: atom.config.get('json-generator.mockdataColors')
-
+      languageCode: customHelpers.languageCode
+      currencyCode: customHelpers.currencyCode
+      jaLorem: customHelpers.jaLorem
     try
       result = allowUnsafeNewFunction -> dummyjson.parse(editor.getText(), {mockdata: mockdata})
       atom.workspace.open('').then((newEditor) ->
