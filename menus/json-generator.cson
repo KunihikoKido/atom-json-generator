@@ -1,0 +1,26 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Generate json-generator'
+      'command': 'json-generator:generate'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'json-generator'
+      'submenu': [
+        {
+          'label': 'Generate'
+          'command': 'json-generator:generate'
+        }
+        {
+          'label': 'New Template'
+          'command': 'json-generator:new-template'
+        }
+      ]
+    ]
+  }
+]

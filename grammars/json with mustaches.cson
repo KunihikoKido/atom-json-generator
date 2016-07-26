@@ -1,0 +1,12 @@
+'scopeName': 'source.json.mustache'
+'name': 'JSON (Mustache)'
+'fileTypes': [
+]
+'patterns': [
+  {
+    'include': 'text.html.mustache'
+  }
+  {
+    'include': 'source.js'
+  }
+]
