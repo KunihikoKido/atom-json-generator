@@ -38,6 +38,12 @@ Generates a random currency.
 
 Generates a random gender.
 
+### Genre
+
+`{{genre}}`
+
+Generates a random genre.
+
 ### Japanese Lorem ipsum
 
 `{{jaLorem [sentenceCount]}}`

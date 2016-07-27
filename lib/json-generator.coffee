@@ -69,6 +69,11 @@ module.exports = JsonGenerator =
       description: "You can override the built-in genders data."
       type: "array"
       default: mockdata.genders
+    mockdataGenres:
+      titie: "Mock data: genres"
+      description: "You can override the built-in genres data."
+      type: "array"
+      default: mockdata.genres
     outputFormat:
       titie: "JSON Output format"
       description: "The format to generate dummy json data with.<br/>json: Pretty JSON format. / jsonlines: newline-delimited JSON format. / elasticsearch: Elasticsearch Bulk API format."
@@ -111,6 +116,7 @@ module.exports = JsonGenerator =
       languages: atom.config.get('json-generator.mockdataLanguages')
       currencies: atom.config.get('json-generator.mockdataCurrencies')
       genders: atom.config.get('json-generator.mockdataGenders')
+      genres: atom.config.get('json-generator.mockdataGenres')
 
     myHelpers =
       currency: helpers.currency
@@ -119,6 +125,7 @@ module.exports = JsonGenerator =
       language: helpers.language
       random: helpers.random
       gender: helpers.gender
+      genre: helpers.genre
 
     try
       result = allowUnsafeNewFunction -> dummyjson.parse(
