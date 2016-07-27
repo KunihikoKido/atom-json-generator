@@ -4,6 +4,18 @@ Generates random dummy JSON data atom package.
 
 ![overview](https://raw.githubusercontent.com/KunihikoKido/atom-json-generator/master/screenshots/overview.gif)
 
+## Installation
+
+Atom Package: https://atom.io/packages/json-generator
+
+```
+apm install json-generator
+```
+
+Or Settings/Preferences ➔ Packages ➔ Search for 
+json-generator
+
+
 ## Commands
 * Json Generator: New Template
 * Json Generator: Generate (ctrl-alt-g)
