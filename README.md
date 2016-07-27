@@ -136,6 +136,8 @@ When you have selected the `jsonlines`
 {"_index":"item","_type":"items","_id":"ed72b4c7-3d68-4221-a469-e166ab644135","firstname":"Maisha","lastname":"Flinn","age":43}
 ```
 
+See more details ➔ [JSON Lines](http://jsonlines.org/)
+
 ### Elasticsearch Bulk API format
 When you have selected the `elasticsearch`
 
@@ -150,3 +152,5 @@ When you have selected the `elasticsearch`
 {"firstname":"Travis","lastname":"Pickering","age":39}
 
 ```
+
+See more details ➔ [Bulk API | Elasticsearch Reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
