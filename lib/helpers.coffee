@@ -36,7 +36,7 @@ module.exports =
     ret = ret.trimRight()
     return ret
 
-  random: (text, separator) ->
+  random: (text, separator, options) ->
     console.log text, separator
     if !separator
       separator = ','
