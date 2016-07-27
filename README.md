@@ -12,8 +12,7 @@ Atom Package: https://atom.io/packages/json-generator
 apm install json-generator
 ```
 
-Or Settings/Preferences ➔ Packages ➔ Search for
-json-generator
+Or Settings/Preferences ➔ Install ➔ Search for `json-generator`
 
 
 ## Commands
@@ -74,28 +73,27 @@ Generates a random occupation.
 
 Generates random sentences of japanese lorem ipsum text.
 
-### Random keyword
-`{{random [text] [separator]}}`
+### Random
+`{{random [Csv] }}`
 
-* `text` keywords string
-* `separator` separator (default is ',')
+* `csv` comma separated values
 
-`{{random 'apple,orange,banana', ','}}`
+`{{random 'apple,orange,banana'}}`
 
 ## Overriding built-in mock data.
 You can override the built-in data using the package settings.
 
-(`Atom` ➔ `Preferences` ➔ Search for `json-generator` ➔ `Settings` ➔ `Mock Data xxx`)
+(Settings/Preferences ➔ Packages ➔ Search for `json-generator`)
 
 
 ## Output Format
 You can change the output format.
-(`Atom` ➔ `Preferences` ➔ Search for `json-generator` ➔ `Settings` ➔ `Output Format`)
+(Settings/Preferences ➔ Packages ➔ Search for `json-generator`)
 
 ### Pretty JSON format.
 When you have selected the `json`
 
-**example**
+**Example**
 
 ``` json
 [
@@ -130,7 +128,7 @@ newline-delimited JSON format.
 
 When you have selected the `jsonlines`
 
-**example**
+**Example**
 
 ``` json
 {"_index":"item","_type":"items","_id":"15e82060-9b25-408d-be74-9f7aa4a9de8b","firstname":"Isabelle","lastname":"Keesee","age":26}
@@ -141,7 +139,7 @@ When you have selected the `jsonlines`
 ### Elasticsearch Bulk API format
 When you have selected the `elasticsearch`
 
-**example**
+**Example**
 
 ``` json
 {"index":{"_index":"item","_type":"items","_id":"95e2351f-f61b-4252-a716-1ddd02850638"}}

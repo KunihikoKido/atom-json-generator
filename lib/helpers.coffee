@@ -31,8 +31,6 @@ module.exports =
 
     items = japaneseText.split("\n")
 
-    console.log totalSentences
-
     ret = ""
 
     for i in [1..totalSentences]
@@ -45,11 +43,13 @@ module.exports =
     ret = ret.trimRight()
     return ret
 
-  random: (text, separator, options) ->
-    console.log text, separator
-    if !separator
-      separator = ','
-    return dummyjson.utils.randomArrayItem(text.split(separator))
+  random: (text, options) ->
+    items = []
+    for val in text.split(',')
+      val = val.trim()
+      if val != ""
+        items.push(val)
+    return dummyjson.utils.randomArrayItem(items)
 
   date: (min, max, format, options) ->
     console.log format
