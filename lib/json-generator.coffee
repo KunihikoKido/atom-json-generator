@@ -55,37 +55,37 @@ module.exports = JsonGenerator =
       type: "array"
       default: dummyjson.mockdata.colors
     mockdataLanguages:
-      titie: "Mock data: languages"
+      title: "Mock data: languages"
       description: "You can override the built-in languages data."
       type: "array"
       default: mockdata.languages
     mockdataCurrencies:
-      titie: "Mock data: currencies"
+      title: "Mock data: currencies"
       description: "You can override the built-in currencies data."
       type: "array"
       default: mockdata.currencies
     mockdataGenders:
-      titie: "Mock data: genders"
+      title: "Mock data: genders"
       description: "You can override the built-in genders data."
       type: "array"
       default: mockdata.genders
     mockdataGenres:
-      titie: "Mock data: genres"
+      title: "Mock data: genres"
       description: "You can override the built-in genres data."
       type: "array"
       default: mockdata.genres
     mockdataMovies:
-      titie: "Mock data: movies"
+      title: "Mock data: movies"
       description: "You can override the built-in movies data."
       type: "array"
       default: mockdata.movies
     mockdataOccupations:
-      titie: "Mock data: occupations"
+      title: "Mock data: occupations"
       description: "You can override the built-in occupations data."
       type: "array"
       default: mockdata.occupations
     outputFormat:
-      titie: "JSON Output format"
+      title: "JSON Output format"
       description: "The format to generate dummy json data with.<br/>json: Pretty JSON format. / jsonlines: newline-delimited JSON format. / elasticsearch: Elasticsearch Bulk API format."
       type: "string"
       enum: ["json", "jsonlines", "elasticsearch"]
