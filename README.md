@@ -74,7 +74,7 @@ Generates a random occupation.
 Generates random sentences of japanese lorem ipsum text.
 
 ### Random
-`{{random [Csv] }}`
+`{{random [csv] }}`
 
 * `csv` comma separated values
 
