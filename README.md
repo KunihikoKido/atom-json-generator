@@ -18,7 +18,7 @@ I am grateful to the dummy-json!
 ## Overriding built-in mock data.
 You can override the built-in data using the package settings.
 
-## My Own Available helpers
+## My own available helpers
 
 ### Language
 
@@ -44,7 +44,7 @@ Generates a random gender.
 
 Generates a random genre.
 
-### Movie Title
+### Movie title
 
 `{{movie}}`
 
@@ -110,6 +110,8 @@ When you have selected the `json`
 ]
 ```
 ### JSON Lines format
+newline-delimited JSON format.
+
 When you have selected the `jsonlines`
 
 **example**
@@ -119,10 +121,8 @@ When you have selected the `jsonlines`
 {"_index":"item","_type":"items","_id":"9ba26f1d-d9b9-4513-834e-01ce22edacad","firstname":"Kathy","lastname":"Oldman","age":79}
 {"_index":"item","_type":"items","_id":"ed72b4c7-3d68-4221-a469-e166ab644135","firstname":"Maisha","lastname":"Flinn","age":43}
 ```
-* **json**: pretty JSON format.
-* **jsonlines**: newline-delimited JSON format.
 
-#### Elasticsearch Bulk API format
+### Elasticsearch Bulk API format
 When you have selected the `elasticsearch`
 
 **example**
