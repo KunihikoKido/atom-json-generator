@@ -44,6 +44,12 @@ Generates a random gender.
 
 Generates a random genre.
 
+## Movie Title
+
+`{{movie}}`
+
+Generates a random movie.
+
 ### Japanese Lorem ipsum
 
 `{{jaLorem [sentenceCount]}}`
