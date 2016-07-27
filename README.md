@@ -66,7 +66,7 @@ Generates a random movie.
 
 Generates a random occupation.
 
-### Japanese Lorem ipsum
+### Japanese lorem ipsum
 
 `{{jaLorem [sentenceCount]}}`
 
@@ -74,7 +74,7 @@ Generates a random occupation.
 
 Generates random sentences of japanese lorem ipsum text.
 
-### Random Keyword
+### Random keyword
 `{{random [text] [separator]}}`
 
 * `text` keywords string
