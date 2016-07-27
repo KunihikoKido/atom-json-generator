@@ -21,6 +21,9 @@ module.exports =
   movie: (options) ->
     return dummyjson.utils.randomArrayItem(options.data.root.movies)
 
+  occupation: (options) ->
+    return dummyjson.utils.randomArrayItem(options.data.root.occupations)
+
   jaLorem: (totalSentences, options) ->
     if !options
       options = totalSentences

@@ -63,6 +63,30 @@ module.exports =
     "Western"
   ]
 
+  occupations: [
+    "administrator",
+    "artist",
+    "doctor",
+    "educator",
+    "engineer",
+    "entertainment",
+    "executive",
+    "healthcare",
+    "homemaker",
+    "lawyer",
+    "librarian",
+    "marketing",
+    "none",
+    "other",
+    "programmer",
+    "retired",
+    "salesman",
+    "scientist",
+    "student",
+    "technician",
+    "writer"
+  ]
+
   movies: [
     "'Til There Was You (1997)",
     "1-900 (1994)",
