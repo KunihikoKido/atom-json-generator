@@ -12,7 +12,7 @@ Atom Package: https://atom.io/packages/json-generator
 apm install json-generator
 ```
 
-Or Settings/Preferences ➔ Packages ➔ Search for 
+Or Settings/Preferences ➔ Packages ➔ Search for
 json-generator
 
 
@@ -68,7 +68,7 @@ Generates a random occupation.
 
 ### Japanese lorem ipsum
 
-`{{jaLorem [sentenceCount]}}`
+`{{loremja [sentenceCount]}}`
 
 * `sentenceCount` Number of sentences to generate (optional, default is 1)
 

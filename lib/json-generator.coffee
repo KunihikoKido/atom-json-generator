@@ -133,7 +133,7 @@ module.exports = JsonGenerator =
     myHelpers =
       currency: helpers.currency
       date: helpers.date
-      jaLorem: helpers.jaLorem
+      loremja: helpers.loremja
       language: helpers.language
       random: helpers.random
       gender: helpers.gender

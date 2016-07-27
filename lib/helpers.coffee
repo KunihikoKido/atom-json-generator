@@ -24,7 +24,7 @@ module.exports =
   occupation: (options) ->
     return dummyjson.utils.randomArrayItem(options.data.root.occupations)
 
-  jaLorem: (totalSentences, options) ->
+  loremja: (totalSentences, options) ->
     if !options
       options = totalSentences
       totalSentences = 1
