@@ -20,17 +20,23 @@ You can override the built-in data using the package settings.
 
 ## My Own Available helpers
 
-### Language Code
+### Language
 
-`{{languageCode}}`
+`{{language}}`
 
-Generates a random language code.
+Generates a random language.
 
-### Currency Code
+### Currency
 
-`{{currencyCode}}`
+`{{currency}}`
 
-Generates a random currency code.
+Generates a random currency.
+
+### Gender
+
+`{{gender}}`
+
+Generates a random gender.
 
 ### Japanese Lorem ipsum
 

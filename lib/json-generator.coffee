@@ -5,7 +5,7 @@ fs = require 'fs'
 helpers = require './helpers'
 path = require 'path'
 utils = require './utils'
-
+mockdata = require './mockdata'
 
 module.exports = JsonGenerator =
   config:
@@ -54,6 +54,21 @@ module.exports = JsonGenerator =
       description: "You can override the built-in colors data."
       type: "array"
       default: dummyjson.mockdata.colors
+    mockdataLanguages:
+      titie: "Mock data: languages"
+      description: "You can override the built-in languages data."
+      type: "array"
+      default: mockdata.languages
+    mockdataCurrencies:
+      titie: "Mock data: currencies"
+      description: "You can override the built-in currencies data."
+      type: "array"
+      default: mockdata.currencies
+    mockdataGenders:
+      titie: "Mock data: genders"
+      description: "You can override the built-in genders data."
+      type: "array"
+      default: mockdata.genders
     outputFormat:
       titie: "JSON Output format"
       description: "The format to generate dummy json data with.<br/>json: Pretty JSON format. / jsonlines: newline-delimited JSON format. / elasticsearch: Elasticsearch Bulk API format."
@@ -81,7 +96,9 @@ module.exports = JsonGenerator =
     editor = atom.workspace.getActiveTextEditor()
     return unless editor?
 
-    mockdata =
+    console.log mockdata
+
+    myMockdata =
       firstNames: atom.config.get('json-generator.mockdataFirstNames')
       lastNames: atom.config.get('json-generator.mockdataLastNames')
       companies: atom.config.get('json-generator.mockdataCompanies')
@@ -91,21 +108,25 @@ module.exports = JsonGenerator =
       countries: atom.config.get('json-generator.mockdataCountries')
       countryCodes: atom.config.get('json-generator.mockdataCountryCodes')
       colors: atom.config.get('json-generator.mockdataColors')
+      languages: atom.config.get('json-generator.mockdataLanguages')
+      currencies: atom.config.get('json-generator.mockdataCurrencies')
+      genders: atom.config.get('json-generator.mockdataGenders')
 
     myHelpers =
+      currency: helpers.currency
       date: helpers.date
-      languageCode: helpers.languageCode
-      currencyCode: helpers.currencyCode
       jaLorem: helpers.jaLorem
+      language: helpers.language
       random: helpers.random
-      date: helpers.date
+      gender: helpers.gender
 
     try
-      result = allowUnsafeNewFunction -> dummyjson.parse(editor.getText(), {mockdata: mockdata, helpers: myHelpers})
+      result = allowUnsafeNewFunction -> dummyjson.parse(
+        editor.getText(), {mockdata: myMockdata, helpers: myHelpers})
+
       json = JSON.parse(result)
 
       outputFormat = atom.config.get("json-generator.outputFormat")
-
       switch outputFormat
         when "jsonlines"
           text = utils.jsonlines(json)
