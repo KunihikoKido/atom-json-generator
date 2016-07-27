@@ -73,3 +73,10 @@ module.exports =
     if !separator
       separator = ','
     return dummyjson.utils.randomArrayItem(text.split(separator))
+
+  date: (min, max, format, options) ->
+    console.log format
+    result = dummyjson.helpers.date(min, max, format, options)
+    if format == 'unix'
+      return result * 1000
+    return result
