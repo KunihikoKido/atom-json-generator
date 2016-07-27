@@ -3,8 +3,9 @@ dummyjson = require 'dummy-json'
 {CompositeDisposable} = require 'atom'
 fs = require 'fs'
 path = require 'path'
-
 customHelpers = require './helpers'
+utils = require './utils'
+
 
 module.exports = JsonGenerator =
   config:
@@ -53,6 +54,12 @@ module.exports = JsonGenerator =
       description: "You can override the built-in colors data."
       type: "array"
       default: dummyjson.mockdata.colors
+    outputFormat:
+      titie: "JSON Output format"
+      description: "The format to generate dummy json data with.<br/>json: Pretty JSON format. / jsonlines: newline-delimited JSON format. / elasticsearch: Elasticsearch Bulk API format."
+      type: "string"
+      enum: ["json", "jsonlines", "elasticsearch"]
+      default: "json"
 
   subscriptions: null
 
@@ -88,13 +95,24 @@ module.exports = JsonGenerator =
       currencyCode: customHelpers.currencyCode
       jaLorem: customHelpers.jaLorem
       random: customHelpers.random
-      
+
     try
       result = allowUnsafeNewFunction -> dummyjson.parse(editor.getText(), {mockdata: mockdata})
       json = JSON.parse(result)
+
+      outputFormat = atom.config.get("json-generator.outputFormat")
+
+      switch outputFormat
+        when "jsonlines"
+          text = utils.jsonlines(json)
+        when "elasticsearch"
+          text = utils.esBulk(json)
+        else
+          text = JSON.stringify(json, null, '  ')
+
       atom.workspace.open('').then((newEditor) ->
         newEditor.setGrammar(atom.grammars.selectGrammar('JSON'))
-        newEditor.setText(JSON.stringify(json, null, '  '))
+        newEditor.setText(text)
       )
       atom.notifications.addSuccess('json-generator', {
           detail: "Success! Generated dummy JSON."
