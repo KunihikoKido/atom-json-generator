@@ -1,0 +1,148 @@
+"source.json.mustache":
+  "Repeat Helper":
+    "prefix": "repeat"
+    "body": """
+      {{#repeat ${1:3}}}
+      ${2}
+      {{/repeat}}
+    """
+  "Integer Helper":
+    "prefix": "integer"
+    "body": """
+      {{int ${1:0} ${2:10} '${3:0,0.00}'}}${4}
+    """
+  "Float Helper":
+    "prefix": "float"
+    "body": """
+      {{float ${1:0} ${2:10} '${3:0,0.00}'}}${4}
+    """
+  "Date Helper":
+    "prefix": "date"
+    "body": """
+      {{date '${1:2014}' '${2:2016}' '${3:YYYY/MM/DD}'}}${4}
+    """
+  "Time Helper":
+    "prefix": "time"
+    "body": """
+      {{time '${1:09:00}' '${2:17:50}' '${3:h:mm a}'}}${4}
+    """
+  "Boolean Helper":
+    "prefix": "boolean"
+    "body": """
+      {{boolean}}${1}
+    """
+  "FirstName Helper":
+    "prefix": "firstname"
+    "body": """
+      {{firstName}}${1}
+    """
+  "LastName Helper":
+    "prefix": "lastname"
+    "body": """
+      {{lastName}}${1}
+    """
+  "Company Helper":
+    "prefix": "company"
+    "body": """
+      {{company}}${1}
+    """
+  "Domain Helper":
+    "prefix": "domain"
+    "body": """
+      {{domain}}${1}
+    """
+  "TLD Helper":
+    "prefix": "tld"
+    "body": """
+      {{tld}}${1}
+    """
+  "Email Helper":
+    "prefix": "email"
+    "body": """
+      {{email}}${1}
+    """
+  "Street Helper":
+    "prefix": "street"
+    "body": """
+      {{street}}${1}
+    """
+  "City Helper":
+    "prefix": "city"
+    "body": """
+      {{city}}${1}
+    """
+  "Country Helper":
+    "prefix": "country"
+    "body": """
+      {{country}}${1}
+    """
+  "Country Code Helper":
+    "prefix": "countrycode"
+    "body": """
+      {{countryCode}}${1}
+    """
+  "Zip Code Helper":
+    "prefix": "zipcode"
+    "body": """
+      {{zipcode}}${1}
+    """
+  "Post Code Helper":
+    "prefix": "postcode"
+    "body": """
+      {{postcode}}${1}
+    """
+  "Latitude Helper":
+    "prefix": "latitude"
+    "body": """
+      {{lat}}${1}
+    """
+  "Longitude Helper":
+    "prefix": "longitude"
+    "body": """
+      {{long}}${1}
+    """
+  "Phone number Helper":
+    "prefix": "phone"
+    "body": """
+      {{phone '${1:+64 (x) xxx xxxx}'}}${2}
+    """
+  "Color Helper":
+    "prefix": "color"
+    "body": """
+      {{color}}${1}
+    """
+  "Hex Color Helper":
+    "prefix": "hexcolor"
+    "body": """
+      {{hexcolor websafe=${1:true}}}}${2}
+    """
+  "GUID Helper":
+    "prefix": "guid"
+    "body": """
+      {{guid}}${1}
+    """
+  "Ipv4 address Helper":
+    "prefix": "ipv4"
+    "body": """
+      {{ipv4}}${1}
+    """
+  "Ipv6 address Helper":
+    "prefix": "ipv6"
+    "body": """
+      {{ipv6}}${1}
+    """
+  "Lorem ipsum Helper":
+    "prefix": "lorem"
+    "body": """
+      {{lorem ${1:3}}}${2}
+    """
+  "Lowercase Helper":
+    "prefix": "lowercase"
+    "body": """
+      {{lowercase (${1:helper})}}${2}
+    """
+  "Uppercase Helper":
+    "prefix": "uppercase"
+    "body": """
+      {{uppercase (${1:helper})}}${2}
+    """
