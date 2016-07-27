@@ -20,17 +20,15 @@ json-generator
 * Json Generator: New Template
 * Json Generator: Generate (ctrl-alt-g)
 
-## Available helpers
+## Basic available helpers
 This package is used based on the [dummy-json](https://github.com/webroo/dummy-json).
 
 You can see the  details of available helpers on the dummy-json.
 
 I am grateful to the dummy-json!
 
-## Overriding built-in mock data.
-You can override the built-in data using the package settings.
 
-## My own available helpers
+## Additional helpers
 
 ### Language
 
@@ -83,6 +81,12 @@ Generates random sentences of japanese lorem ipsum text.
 * `separator` separator (default is ',')
 
 `{{random 'apple,orange,banana', ','}}`
+
+## Overriding built-in mock data.
+You can override the built-in data using the package settings.
+
+(`Atom` ➔ `Preferences` ➔ Search for `json-generator` ➔ `Settings` ➔ `Mock Data xxx`)
+
 
 ## Output Format
 You can change the output format.
