@@ -90,7 +90,7 @@ You can override the built-in data using the package settings.
 You can change the output format.
 (Settings/Preferences ➔ Packages ➔ Search for `json-generator`)
 
-### Pretty JSON format.
+### Pretty JSON format
 When you have selected the `json`
 
 **Example**
