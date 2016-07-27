@@ -1,9 +1,9 @@
 {allowUnsafeEval, allowUnsafeNewFunction} = require 'loophole'
-dummyjson = require 'dummy-json'
 {CompositeDisposable} = require 'atom'
+dummyjson = require 'dummy-json'
 fs = require 'fs'
+helpers = require './helpers'
 path = require 'path'
-customHelpers = require './helpers'
 utils = require './utils'
 
 
@@ -91,13 +91,17 @@ module.exports = JsonGenerator =
       countries: atom.config.get('json-generator.mockdataCountries')
       countryCodes: atom.config.get('json-generator.mockdataCountryCodes')
       colors: atom.config.get('json-generator.mockdataColors')
-      languageCode: customHelpers.languageCode
-      currencyCode: customHelpers.currencyCode
-      jaLorem: customHelpers.jaLorem
-      random: customHelpers.random
+
+    myHelpers =
+      date: helpers.date
+      languageCode: helpers.languageCode
+      currencyCode: helpers.currencyCode
+      jaLorem: helpers.jaLorem
+      random: helpers.random
+      date: helpers.date
 
     try
-      result = allowUnsafeNewFunction -> dummyjson.parse(editor.getText(), {mockdata: mockdata})
+      result = allowUnsafeNewFunction -> dummyjson.parse(editor.getText(), {mockdata: mockdata, helpers: myHelpers})
       json = JSON.parse(result)
 
       outputFormat = atom.config.get("json-generator.outputFormat")
@@ -114,13 +118,12 @@ module.exports = JsonGenerator =
         newEditor.setGrammar(atom.grammars.selectGrammar('JSON'))
         newEditor.setText(text)
       )
-      atom.notifications.addSuccess('json-generator', {
-          detail: "Success! Generated dummy JSON."
-      })
+      atom.notifications.addSuccess(
+        'json-generator', {detail: "Success! Generated dummy JSON."})
+
     catch error
-      atom.notifications.addError('json-generator', {
-        detail: "Error! #{error.message}"
-      })
+      atom.notifications.addError(
+        'json-generator', {detail: "Error! #{error.message}"})
 
   newTemplate: ->
     template = fs.readFileSync(path.join(__dirname, 'template.hbs'), {encoding: 'utf8'})
