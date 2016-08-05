@@ -84,6 +84,16 @@ module.exports = JsonGenerator =
       description: "You can override the built-in occupations data."
       type: "array"
       default: mockdata.occupations
+    mockdataContactTypes:
+      title: "Mock data: contact types"
+      description: "You can override the built-in contact types data."
+      type: "array"
+      default: mockdata.contactTypes
+    mockdataPaymentTypes:
+      title: "Mock data: payment types"
+      description: "You can override the built-in payment types data."
+      type: "array"
+      default: mockdata.paymentTypes
     outputFormat:
       title: "JSON Output format"
       description: "The format to generate dummy json data with.<br/>json: Pretty JSON format. / jsonlines: newline-delimited JSON format. / elasticsearch: Elasticsearch Bulk API format."
@@ -129,6 +139,8 @@ module.exports = JsonGenerator =
       genres: atom.config.get('json-generator.mockdataGenres')
       movies: atom.config.get('json-generator.mockdataMovies')
       occupations: atom.config.get('json-generator.mockdataOccupations')
+      contactTypes: atom.config.get('json-generator.mockdataContactTypes')
+      paymentTypes: atom.config.get('json-generator.mockdataPaymentTypes')
 
     myHelpers =
       currency: helpers.currency
@@ -140,6 +152,8 @@ module.exports = JsonGenerator =
       genre: helpers.genre
       movie: helpers.movie
       occupation: helpers.occupation
+      contactType: helpers.contactType
+      paymentType: helpers.paymentType
 
     try
       result = allowUnsafeNewFunction -> dummyjson.parse(

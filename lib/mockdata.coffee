@@ -41,6 +41,10 @@ module.exports =
 
   genders: ["female", "male"]
 
+  contactTypes: ["EMAIL", "PUSH_NOTIFY", "SMS", "TEL", "OTHER"]
+
+  paymentTypes: ["CREDIT_CARD", "BANK", "OTHER"]
+
   genres: [
     "unknown",
     "Action",

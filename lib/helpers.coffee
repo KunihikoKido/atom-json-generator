@@ -15,6 +15,12 @@ module.exports =
   gender: (options) ->
     return dummyjson.utils.randomArrayItem(options.data.root.genders)
 
+  contactType: (options) ->
+    return dummyjson.utils.randomArrayItem(options.data.root.contactTypes)
+
+  paymentType: (options) ->
+    return dummyjson.utils.randomArrayItem(options.data.root.paymentTypes)
+
   genre: (options) ->
     return dummyjson.utils.randomArrayItem(options.data.root.genres)
 
